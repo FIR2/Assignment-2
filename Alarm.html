@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CLOCK</title>
+    <link rel="stylesheet" href="alarm.css">
+  </head>
+  <body>
+    <div id="app">
+      <h1>CURRENT TIME</h1>
+      <div id="current-time"></div>
+      <div class="create-alarm">
+        <div class="form-actions">
+          <form>
+            <div class="alarm-inputs">
+              <input
+                type="number"
+                name="hour"
+                placeholder="Enter hours"
+                min="0"
+                max="12"
+                required
+              />
+              <input
+                type="number"
+                name="min"
+                min="0"
+                max="60"
+                placeholder="Enter minutes"
+                required
+              />
+              <input
+                type="number"
+                name="sec"
+                min="0"
+                max="60"
+                placeholder="Enter seconds"
+                required
+              />
+              <select name="zone" required>
+                <option value="" selected disabled>Zone</option>
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+              </select>
+            </div>
+            <button>Set Alarm</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="active-alarm">
+      <div id="alarm-text"></div>
+      <button id="clear-alarm">Clear Alarm</button>
+    </div>
+    <audio id="alarm-audio"></audio>
+    <script src="alarm.js"></script>
+    
+  </body>
+</html>
